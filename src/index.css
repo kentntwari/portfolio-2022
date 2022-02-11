@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-white-site px-10 py-16;
+}
+
 @layer base {
   h1 {
-    @apply text-4xl font-display;
+    @apply text-[2.563rem] md:text-4xl font-display font-semibold;
   }
 
   h2 {
@@ -31,7 +35,8 @@
     @apply text-medium font-body;
   }
 
-  p {
+  p,
+  a {
     @apply text-base font-body;
   }
 }
