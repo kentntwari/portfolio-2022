@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import ButtonPrimary from '../../components/buttons/ButtonPrimary';
 
+import BlobHeroHomeLeft from '../../components/background/homepage/BlobHeroHomeLeft';
+import CircleRight from '../../components/background/homepage/CircleRight';
+
 const Hero = () => {
   return (
-    <section>
+    <section className="relative">
       <article className="flex flex-col items-center gap-[11px]">
         <h1 className="text-center">Bringing designs to life with Code</h1>
         <p className="text-center">
@@ -13,6 +16,11 @@ const Hero = () => {
         </p>
         <ButtonPrimary>Check out my work</ButtonPrimary>
       </article>
+
+      <Fragment>
+        <BlobHeroHomeLeft />
+        <CircleRight />
+      </Fragment>
     </section>
   );
 };
