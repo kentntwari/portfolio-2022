@@ -21,6 +21,9 @@ module.exports = {
         full: colors.white,
         site: '#fcfaf9',
       },
+      black: {
+        full: colors.black,
+      },
       blue: {
         full: colors.blue,
         015: '#1bd7f026',
@@ -44,7 +47,11 @@ module.exports = {
         100: '#ff49a0',
       },
     },
-    extend: {},
+    extend: {
+      spacing: {
+        33: '8.25rem',
+      },
+    },
   },
   plugins: [],
 };

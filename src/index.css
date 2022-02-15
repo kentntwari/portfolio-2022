@@ -12,23 +12,23 @@ body {
   }
 
   h2 {
-    @apply text-3xl font-display;
+    @apply text-[2.25rem] md:text-3xl font-display font-semibold;
   }
 
   h3 {
-    @apply text-2xl font-display;
+    @apply text-2xl font-display font-semibold;
   }
 
   h4 {
-    @apply text-xl font-display;
+    @apply text-[1.313rem] md:text-xl font-display font-semibold;
   }
 
   h5 {
-    @apply text-lg font-display;
+    @apply text-lg font-display font-semibold;
   }
 
   h6 {
-    @apply text-medium font-display;
+    @apply text-medium font-display font-semibold;
   }
 
   .major {

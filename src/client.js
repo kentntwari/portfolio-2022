@@ -1,6 +1,11 @@
-import sanityClient from '@sanity/client';
+const sanityClient = require('@sanity/client');
 
-export default sanityClient({
+const client = sanityClient({
   projectId: 'hniiaphy',
   dataset: 'production',
+  apiVersion: '2022-02-11',
+  // token: 'sanity-auth-token',
+  useCdn: true,
 });
+
+export default client;
