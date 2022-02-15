@@ -10,7 +10,7 @@ const Hero = () => {
     <section className="relative">
       <article className="flex flex-col items-center gap-[11px]">
         <h1 className="text-center">Bringing designs to life with Code</h1>
-        <p className="text-center">
+        <p className="w-[266px] text-center">
           Got an idea or a mockup of your design you'd like to see on the web? No problem
           - I'll code it out for you and make it functional!
         </p>

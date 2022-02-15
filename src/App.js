@@ -13,7 +13,7 @@ import CircleBottomRight from './components/background/app/CircleBottomRight';
 
 function App() {
   return (
-    <div className="App relative">
+    <div className="App w-full px-[30px] py-16 relative overflow-x-hidden">
       <Menu />
 
       <Routes>

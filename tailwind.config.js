@@ -20,6 +20,7 @@ module.exports = {
       white: {
         full: colors.white,
         site: '#fcfaf9',
+        70: '#ffffffb3',
       },
       black: {
         full: colors.black,

@@ -3,40 +3,40 @@
 @tailwind utilities;
 
 body {
-  @apply bg-white-site px-10 py-16;
+  @apply box-border bg-white-site;
 }
 
 @layer base {
   h1 {
-    @apply text-[2.563rem] md:text-4xl font-display font-semibold;
+    @apply text-[2.563rem] md:text-4xl font-display font-semibold leading-tight;
   }
 
   h2 {
-    @apply text-[2.25rem] md:text-3xl font-display font-semibold;
+    @apply text-[2.25rem] md:text-3xl font-display font-semibold leading-tight;
   }
 
   h3 {
-    @apply text-2xl font-display font-semibold;
+    @apply text-2xl font-display font-semibold leading-tight;
   }
 
   h4 {
-    @apply text-[1.313rem] md:text-xl font-display font-semibold;
+    @apply text-[1.313rem] md:text-xl font-display font-semibold leading-tight;
   }
 
   h5 {
-    @apply text-lg font-display font-semibold;
+    @apply text-lg font-display font-semibold leading-tight;
   }
 
   h6 {
-    @apply text-medium font-display font-semibold;
+    @apply text-medium font-display font-semibold leading-tight;
   }
 
   .major {
-    @apply text-medium font-body;
+    @apply text-medium font-body leading-tight;
   }
 
   p,
   a {
-    @apply text-base font-body;
+    @apply text-base font-body leading-tight;
   }
 }
