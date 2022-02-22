@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+
+import Hero from './Hero';
+import Websites from './Websites';
 
 const Works = () => {
-  return <div>Works</div>;
+  return (
+    <Fragment>
+      <Hero />
+      <Websites />
+    </Fragment>
+  );
 };
 
 export default Works;
