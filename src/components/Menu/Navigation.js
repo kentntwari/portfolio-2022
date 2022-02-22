@@ -4,7 +4,9 @@ import { v4 as uuidv4 } from 'uuid';
 
 import blurContext from '../../global/context/blurContext';
 
-const Navigation = ({ hiddenOnMobile, className, applyClassOnLink }) => {
+const Navigation = ({ ...props }) => {
+  const { hiddenOnMobile, className, applyClassOnLink } = props;
+
   const context = useContext(blurContext);
   const { hideBgBlur } = context;
 
