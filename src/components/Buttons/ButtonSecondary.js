@@ -1,13 +1,14 @@
 import React, { useRef, useEffect } from 'react';
 
-const ButtonSecondary = ({ children, addClasses = null, removeClasses = null }) => {
+const ButtonSecondary = ({ ...props }) => {
+  const { children, addClasses, removeClasses } = props;
+
   const button_secondary = useRef();
 
   useEffect(() => {
-    if (removeClasses !== null)
+    if (removeClasses)
       removeClasses.map((x) => button_secondary.current.classList.remove(x));
-    if (addClasses !== null)
-      addClasses.map((x) => button_secondary.current.classList.add(x));
+    if (addClasses) addClasses.map((x) => button_secondary.current.classList.add(x));
   }, [button_secondary, addClasses, removeClasses]);
 
   return (
