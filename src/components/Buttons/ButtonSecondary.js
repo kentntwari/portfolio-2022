@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
-const ButtonSecondary = ({ children }) => {
+const ButtonSecondary = ({ children, addClasses = null, removeClasses = null }) => {
+  const button_secondary = useRef();
+
+  useEffect(() => {
+    if (removeClasses !== null)
+      removeClasses.map((x) => button_secondary.current.classList.remove(x));
+    if (addClasses !== null)
+      addClasses.map((x) => button_secondary.current.classList.add(x));
+  }, [button_secondary, addClasses, removeClasses]);
+
   return (
     <button
+      ref={button_secondary}
       className="bg-white-full py-2.5 px-10 rounded-full border-solid border
        text-center text-medium font-display font-normal text-pink-100">
       {children}
