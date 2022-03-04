@@ -14,7 +14,7 @@ const Hero = () => {
           Got an idea or a mockup of your design you'd like to see on the web? No problem
           - I'll code it out for you and make it functional!
         </p>
-        <ButtonPrimary>Check out my work</ButtonPrimary>
+        <ButtonPrimary url="/works">Check out my work</ButtonPrimary>
       </article>
 
       <Fragment>
