@@ -9,7 +9,7 @@ const Footer = () => {
       <section className="flex flex-col items-center gap-[43px]">
         <div className="flex flex-col gap-2 5">
           <h2 className="text-center">Let's get in touch</h2>
-          <p className="text-center">
+          <p className="text-center w-[286px] m-auto">
             I would love to contribute to your business success, whether that involves
             hiring me as part of your team or for one of your projects.
           </p>

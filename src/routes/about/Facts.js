@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useMemo } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 import useFetchBackground from '../../utilities/hooks/useFetchBackground';
@@ -8,8 +8,8 @@ import CircleFactsAboutRight from '../../components/background/aboutPage/CircleF
 const Facts = () => {
   const { facts } = useFetchBackground();
 
-  const applyCardStyles = useCallback(() => {
-    return 'relative bg-white-full p-5 font-body shadow-[30px_38px_37px_20px_rgba(196,196,196,0.25)]';
+  const applyCardStyles = useMemo(() => {
+    return 'relative bg-white-full p-5 font-body shadow-[0_4px_30px_rgba(196,196,196,0.25)] rounded-[10px]';
   }, []);
 
   return (

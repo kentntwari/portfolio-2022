@@ -23,13 +23,15 @@ const FAQ = () => {
 
   return (
     <section className="relative w-full mt-[104px]">
-      <h2 className="text-center mb-[15px]">Still want to know more?</h2>
-      <p className="text-center mb-[35px]">
-        I compiled a few questions that might get across and did my best to answer them.
-        Hope it helps!
-      </p>
+      <Fragment>
+        <h2 className="w-[314px] m-auto text-center">Still want to know more?</h2>
+        <p className="w-[90%] text-center mx-auto mt-[15px] mb-[35px]">
+          I compiled a few questions that might get across and did my best to answer them.
+          Hope it helps!
+        </p>
 
-      <div className="w-full flex flex-col items-start gap-[15px]">{displayFAQ()}</div>
+        <div className="w-full flex flex-col items-start gap-[15px]">{displayFAQ()}</div>
+      </Fragment>
 
       <Fragment>
         <BlobQuestionsAboutCenter />

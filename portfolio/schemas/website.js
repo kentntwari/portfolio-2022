@@ -33,24 +33,7 @@ export default {
     {
       name: 'preview',
       title: 'Preview',
-      type: 'object',
-      fields: [
-        {
-          name: 'general_view',
-          title: 'General View',
-          type: 'image',
-        },
-        {
-          name: 'on_resize',
-          title: 'On resize',
-          type: 'image',
-        },
-        {
-          name: 'code_view',
-          title: 'Code View',
-          type: 'image',
-        },
-      ],
+      type: 'image',
     },
     {
       name: 'trailer',
@@ -65,16 +48,16 @@ export default {
       rows: 5,
     },
     {
-      name: 'bio',
-      title: 'Bio',
+      name: 'features',
+      title: 'features',
       type: 'array',
-      of: [
-        {
-          title: 'Block',
-          type: 'block',
-          styles: [{ title: 'Normal', value: 'normal' }],
-        },
-      ],
+      of: [{ type: 'string' }],
+    },
+    {
+      name: 'challenges',
+      title: 'Challenges',
+      type: 'array',
+      of: [{ type: 'block' }],
     },
   ],
   preview: {
