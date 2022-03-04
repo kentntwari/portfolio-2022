@@ -5,7 +5,7 @@ import Menu from './components/menu';
 import Home from './routes/home';
 import About from './routes/about';
 import Works from './routes/works';
-import Website from './routes/works/Website';
+import Website from './routes/website';
 import Footer from './components/footer';
 
 import CircleTopLeft from './components/background/app/CircleTopLeft';
@@ -22,12 +22,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/works" element={<Works />}>
-              <Route path=":website" element={<Website />} />
-            </Route>
+            <Route path="/works" element={<Works />}></Route>
+            <Route path="/works/:website" element={<Website />} />
           </Routes>
         </BlurredBg>
-        
+
         <Footer />
       </Fragment>
 
