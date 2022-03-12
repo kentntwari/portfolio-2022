@@ -14,7 +14,7 @@ import BlurredBg from './components/background/app/BlurredBg';
 
 function App() {
   return (
-    <div className="App w-full px-[30px] py-16 relative overflow-x-hidden">
+    <div className="App w-full px-7.5 md:px-20 py-16 relative overflow-x-hidden">
       <Fragment>
         <Menu />
 
