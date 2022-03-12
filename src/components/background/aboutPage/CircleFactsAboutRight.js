@@ -1,10 +1,10 @@
 import React from 'react';
 
-import CircleCenter from '../homepage/CircleCenter';
+import Circle from '../Circle';
 
 const CircleFactsAboutRight = () => {
   return (
-    <CircleCenter
+    <Circle
       bgColor="bg-blue-13"
       coordinatesX="left-[40px]"
       coordinatesY="bottom-[38px]"

@@ -1,13 +1,13 @@
 import React from 'react';
 
-import CircleCenter from '../homepage/CircleCenter';
+import Circle from '../Circle';
 
 const CircleHeroAboutRight = () => {
   return (
-    <CircleCenter
+    <Circle
       bgColor="bg-blue-13"
       coordinatesX="left-[70px]"
-      coordinatesY="bottom-[90px]"
+      coordinatesY="translate-y-[250px]"
     />
   );
 };
