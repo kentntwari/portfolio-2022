@@ -16,6 +16,7 @@ const Menu = () => {
   return (
     <header className="relative mb-33 z-20">
       <Navigation hiddenOnMobile={hidden} />
+      
       <img
         ref={burger_ref}
         className={hidden ? 'w-[50px] h-[50px]' : 'hidden'}
