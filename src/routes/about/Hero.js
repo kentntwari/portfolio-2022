@@ -11,19 +11,23 @@ const Hero = () => {
   const { bio, profileImage } = useFetchBackground();
 
   return (
-    <article className="relative flex flex-col items-center gap-9">
-      <h1 className="text-center">
-        Hello,
-        <br /> my name is Kent
-      </h1>
-      <p className="text-center">{bio && bio}</p>
-      {profileImage && <Headshot asset={profileImage} />}
+    <Fragment>
+      <article className="relative flex flex-col items-center gap-5">
+        <h1>
+          Hello,
+          {window.innerHeight < 768 && <br />} my name is Kent
+        </h1>
 
-      <Fragment>
-        <CircleHeroAboutLeft />
-        <CircleHeroAboutRight />
-      </Fragment>
-    </article>
+        <p>{bio && bio}</p>
+
+        <Fragment>
+          <CircleHeroAboutLeft />
+          <CircleHeroAboutRight />
+        </Fragment>
+      </article>
+
+      {profileImage && <Headshot asset={profileImage} />}
+    </Fragment>
   );
 };
 

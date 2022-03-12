@@ -9,17 +9,17 @@ const Prompts = () => {
 
     return links.map((link) => (
       <Fragment key={uuidv4()}>
-        <ButtonPrimary url="/">Contact me on {link}</ButtonPrimary>
+        <ButtonPrimary url="/" className="py-5 px-7.5 text-center">
+          Contact me on {link}
+        </ButtonPrimary>
       </Fragment>
     ));
   }, []);
 
   return (
-    <section className="mt-[104px] grid grid-cols-1 gap-[36px] place-items-center">
-      <h2 className="w-[270px] text-center">
-        I'd love to work with you or be part of your team
-      </h2>
-      <div className="flex flex-col gap-[20px]">{contactLinks()}</div>
+    <section className="mt-28 grid grid-cols-1 gap-7.5">
+      <h2>I'd love to work with you or be part of your team</h2>
+      <div className="flex flex-col gap-5">{contactLinks()}</div>
     </section>
   );
 };
