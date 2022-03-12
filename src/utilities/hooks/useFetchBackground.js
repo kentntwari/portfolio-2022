@@ -20,12 +20,12 @@ const useFetchBackground = () => {
 
     sanityClient.fetch(apiEndpoint).then((res) => {
       if (isMounted && res !== null) {
-        setBio(() => res.bio && res.bio);
-        setFirstFact(() => res.fact_one && res.fact_one);
-        setSecondFact(() => res.fact_two && res.fact_two);
-        setThirdFact(() => res.fact_three && res.fact_three);
-        setProfileImage(() => res.image && res.image);
-        setFAQ(() => res.questions && res.questions);
+        setBio(res.bio);
+        setFirstFact(res.fact_one);
+        setSecondFact(res.fact_two);
+        setThirdFact(res.fact_three);
+        setProfileImage(res.image);
+        setFAQ(res.questions);
       }
 
       return () => (isMounted = false);
