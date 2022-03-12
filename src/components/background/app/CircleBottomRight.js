@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useRef } from 'react';
+
+import Circle from '../Circle';
 
 const CircleBottomRight = () => {
+  const circle_bottom_right = useRef();
+
   return (
-    <div
-      className="bg-green-14 absolute bottom-0 -right-[65px] -z-10 w-[300px] h-[300px]
-    rounded-full blur-[80px]"></div>
+    <Circle
+      ref={circle_bottom_right}
+      bgColor="bg-green-14"
+      blur="80px"
+      coordinatesX="-right-[65px]"
+      coordinatesY="bottom-0"
+      width="300px"
+      height="300px"
+    />
   );
 };
 

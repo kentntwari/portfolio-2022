@@ -7,7 +7,7 @@ const BlurredBg = ({ children }) => {
 
   const { hidden } = context;
 
-  return <div className={hidden ? 'filter-none' : 'blur-md'}>{children}</div>;
+  return <div className={hidden ? 'filter-none' : 'blur-md pointer-events-none'}>{children}</div>;
 };
 
 export default BlurredBg;
