@@ -6,7 +6,7 @@ import Works from './Works';
 
 const Home = () => {
   return (
-    <main className="flex flex-col gap-33">
+    <main className="flex flex-col gap-28">
       <Hero />
       <Tech />
       <Works />

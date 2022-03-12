@@ -1,9 +1,17 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { Fragment } from 'react';
+
+import Hero from './Hero';
+import Features from './Features';
+import Challenges from './Challenges';
 
 const Website = () => {
-  let params = useParams();
-  return <div>{console.log(params)}</div>;
+  return (
+    <Fragment>
+      <Hero />
+      <Features />
+      <Challenges />
+    </Fragment>
+  );
 };
 
 export default Website;
