@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import blurContext from '../../../global/context/blurContext';
+import blurContext from '../../../global/context/context.init';
 
 const BlurredBg = ({ children }) => {
   const context = useContext(blurContext);

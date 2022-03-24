@@ -4,13 +4,15 @@ import { v4 as uuidv4 } from 'uuid';
 import useFetchWebsites from '../../utilities/hooks/useFetchWebsites';
 import { websiteDataProps as data } from '../../utilities/functions/websiteDataProps';
 
-import Website from '../cards/Website';
+import Website from '../cards/component.website';
+
+import { websites_grid } from '../../styles/blocks/styles.websitesGrid';
 
 const WebsitesBlock = () => {
   const works = useFetchWebsites();
 
   return (
-    <div className="lg:px-9 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-7.5">
+    <div className={websites_grid}>
       {works !== null &&
         works.map(({ title, trailer, slug }, index) => (
           <Fragment key={uuidv4()}>

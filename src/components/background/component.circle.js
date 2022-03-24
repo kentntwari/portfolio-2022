@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect } from 'react';
+import React, { forwardRef } from 'react';
 
 const Circle = forwardRef(({ ...props }, ref) => {
   const {
@@ -11,15 +11,11 @@ const Circle = forwardRef(({ ...props }, ref) => {
     className,
   } = props;
 
-  useEffect(() => {
-    if (ref && className) ref.current.classList.add(className);
-  }, [ref, className]);
-
   return (
     <>
       <div
         ref={ref}
-        className={`${bgColor} transform absolute ${
+        className={`${className ? className : 'auto'} ${bgColor} transform absolute ${
           coordinatesX ? coordinatesX : 'left-0'
         } ${coordinatesY ? coordinatesY : 'top-0'} -z-10 rounded-full`}
         style={{ filter: `blur(${blur})`, width: `${width}`, height: `${height}` }}></div>
