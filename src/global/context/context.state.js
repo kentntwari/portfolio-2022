@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from 'react';
 
-import portfolioContext from './blurContext';
-import portfolioReducer from './blurReducer';
+import portfolioContext from './context.init';
+import portfolioReducer from './context.reducer';
 import { HIDE_BLUR, TOGGLE_BLUR } from '../types';
 
 const BlurState = ({ children }) => {
