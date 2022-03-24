@@ -12,7 +12,7 @@ const useFetchBackground = () => {
   const [FAQ, setFAQ] = useState({});
 
   useEffect(() => {
-    import('../../api/background').then((module) => setApiEndpoint(module.background));
+    import('../../api/api.background').then((module) => setApiEndpoint(module.background));
   }, []);
 
   useEffect(() => {

@@ -6,7 +6,7 @@ const useFetchWebsites = () => {
   const [websites, setWebsites] = useState(null);
 
   useEffect(() => {
-    import('../../api/websites').then((module) => setApiEndpoint(module.websites()));
+    import('../../api/api.websites').then((module) => setApiEndpoint(module.websites()));
   }, []);
 
   useEffect(() => {

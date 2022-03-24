@@ -6,7 +6,7 @@ const useFetchTechUsed = () => {
   const [tech, setTech] = useState(null);
 
   useEffect(() => {
-    import('../../api/technologies').then((module) => {
+    import('../../api/api.technologies').then((module) => {
       setApiEndpoint(module.technologies());
     });
   }, []);

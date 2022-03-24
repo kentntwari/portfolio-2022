@@ -8,7 +8,7 @@ const useFetchHomepageDemo = () => {
   const [figmaSnippet, setFigmaSnippet] = useState(null);
 
   useEffect(() => {
-    import('../../api/homeDemo').then((module) => setApiEndpoint(module.homeDemo()));
+    import('../../api/api.homeDemo').then((module) => setApiEndpoint(module.homeDemo()));
   }, []);
 
   useEffect(() => {
