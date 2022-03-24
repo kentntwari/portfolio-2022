@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 
-import Hero from './Hero';
-import Facts from './Facts';
-import Prompts from './Prompts';
-import FAQ from './FAQ';
+import Hero from './components/component.hero';
+import Facts from './components/component.facts';
+import Prompts from './components/component.prompts';
+import FAQ from './components/component.FAQ';
 
 const About = () => {
   return (

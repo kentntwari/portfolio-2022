@@ -1,15 +1,17 @@
 import React, { Fragment } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-import useFetchHomepageDemo from '../../utilities/hooks/useFetchHomepageDemo';
+import useFetchHomepageDemo from '../../../utilities/hooks/useFetchHomepageDemo';
 
-import DemoItem from '../../components/blocks/DemoItem';
+import DemoItem from '../../../components/blocks/component.demoItem';
+
+import { section } from '../styles/styles.demo';
 
 const Demo = () => {
   const snippets = useFetchHomepageDemo();
 
   return (
-    <section className="w-fit mx-auto mt-48 flex flex-col">
+    <section className={section}>
       {snippets &&
         snippets.map(
           (elt) =>

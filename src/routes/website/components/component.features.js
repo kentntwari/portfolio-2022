@@ -2,11 +2,13 @@ import React, { Fragment } from 'react';
 import { useParams } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
-import useFetchWebsiteDetails from '../../utilities/hooks/useFetchWebsiteDetails';
+import useFetchWebsiteDetails from '../../../utilities/hooks/useFetchWebsiteDetails';
 
-import Feature from '../../components/cards/Feature';
+import Feature from '../../../components/cards/component.feature';
 
-import BlobFeaturesWebsiteCenter from '../../components/background/website/BlobFeaturesWebsiteCenter';
+import { section } from '../styles/styles.features';
+
+import CircleFeaturesBottomLeft from '../../../components/background/website/component.circleFeaturesBottomLeft';
 
 const Features = () => {
   let { website: slug } = useParams();
@@ -14,7 +16,7 @@ const Features = () => {
   const { features } = useFetchWebsiteDetails(slug);
 
   return (
-    <section className="relative lg:w-10/12 mt-20 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[20px]">
+    <section className={section}>
       {features !== null &&
         features.map((feature, index) => (
           <Fragment key={uuidv4()}>
@@ -23,7 +25,7 @@ const Features = () => {
         ))}
 
       <Fragment>
-        <BlobFeaturesWebsiteCenter />
+        <CircleFeaturesBottomLeft />
       </Fragment>
     </section>
   );
