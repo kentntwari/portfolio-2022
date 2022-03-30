@@ -9,17 +9,19 @@ import Website from '../cards/component.website';
 import { websites_grid } from '../../styles/blocks/styles.websitesGrid';
 
 const WebsitesBlock = () => {
-  const works = useFetchWebsites();
+  const { response } = useFetchWebsites();
 
   return (
-    <div className={websites_grid}>
-      {works !== null &&
-        works.map(({ title, trailer, slug }, index) => (
-          <Fragment key={uuidv4()}>
-            <Website {...data(index, title, trailer, slug)} />
-          </Fragment>
-        ))}
-    </div>
+    <Fragment>
+      <div className={websites_grid}>
+        {response &&
+          response.map(({ title, trailer, slug }, index) => (
+            <Fragment key={uuidv4()}>
+              <Website {...data(index, title, trailer, slug)} />
+            </Fragment>
+          ))}
+      </div>
+    </Fragment>
   );
 };
 

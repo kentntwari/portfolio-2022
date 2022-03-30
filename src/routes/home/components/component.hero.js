@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import Demo from './components.demo';
+import Demo from './component.demo';
 import ButtonPrimary from '../../../components/buttons/component.buttonPrimary';
 
 import { section, article, heading, paragraph, button } from '../styles/styles.hero';

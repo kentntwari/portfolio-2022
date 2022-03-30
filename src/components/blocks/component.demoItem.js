@@ -1,93 +1,70 @@
-import React, { Fragment, useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 
-import SnippetLoader from '../loaders/loader.snippet';
-import SnippetCardLoader from '../loaders/loader.snippetCard';
+import curlyArrow from '../../utilities/images/curly-arrow.png';
+import { LoadSnippet, LoadSnippetCard } from '../loaders/homepage/loaders.demo';
+
+import { generateParentStyles as wrapper } from '../../utilities/functions/customSnippetStyles';
+import { arrowCustomStyles as arrow } from '../../utilities/functions/customArrowStyles';
 
 import {
   default_demo_snippet,
   default_demo_card,
-  arrow_styles,
-  parent_styles,
 } from '../../styles/blocks/styles.demoItem';
 
 const DemoItem = ({ text, title, image }) => {
-  const [arrowIcon, setArrowIcon] = useState(null);
-  const [demoSnippet, setDemoSnippet] = useState(null);
-  const [demoCard, setDemoCard] = useState(null);
+  const [demoSnippet, setDemoSnippet] = useState(() => <LoadSnippet mappingTo={title} />);
+  const [demoCard, setDemoCard] = useState(() => <LoadSnippetCard mappingTo={title} />);
 
   useEffect(() => {
     let isMounted = true;
 
-    import('../../utilities/functions/customSnippetStyles').then(
-      ({ modifySnippet }) =>
-        isMounted &&
-        setDemoSnippet(() => (
-          <img
-            className={`${modifySnippet(title)} ${default_demo_snippet}`}
-            src={image}
-            alt={`${title}_snippet`}
-          />
-        ))
+    import('../../utilities/functions/customSnippetStyles').then(({ modifySnippet }) =>
+      setTimeout(
+        () =>
+          isMounted &&
+          setDemoSnippet(() => (
+            <img
+              className={`${modifySnippet(title)} ${default_demo_snippet}`}
+              src={image}
+              alt={`${title}_snippet`}
+            />
+          )),
+        2000
+      )
     );
 
     return () => (isMounted = false);
   }, [title, image, text]);
 
   useEffect(() => {
-    let isMounted = true;
+    let is_mounted = true;
 
     import('../../utilities/functions/generateCardSnippetTextStyles').then(
-      ({ cardTextClass }) => {
-        if (isMounted) {
-          setDemoCard(() => (
-            <figcaption className={`${cardTextClass(title)} ${default_demo_card}`}>
-              {text}
-            </figcaption>
-          ));
-
-          import('../../utilities/images/curly-arrow.png').then((module) =>
-            setArrowIcon(() => {
-              function arrowCustomStyles(title) {
-                if (title === 'code') return arrow_styles.code;
-                if (title === 'figma') return arrow_styles.figma;
-                if (title === 'website') return arrow_styles.website;
-              }
-
-              return (
-                <img
-                  src={module.default}
-                  className={arrowCustomStyles(title)}
-                  alt="curly-arrow"
-                />
-              );
-            })
-          );
-        }
-      }
+      ({ cardTextClass }) =>
+        setTimeout(
+          () =>
+            is_mounted &&
+            setDemoCard(() => (
+              <figcaption className={`${cardTextClass(title)} ${default_demo_card}`}>
+                {text}
+              </figcaption>
+            )),
+          2000
+        )
     );
 
-    return () => (isMounted = false);
+    return () => (is_mounted = false);
   }, [text, title]);
 
-  const displayItem = useCallback(() => {
-    function generateParentStyles(title) {
-      if (title === 'code') return parent_styles.code;
-      if (title === 'figma') return parent_styles.figma;
-      if (title === 'website') return parent_styles.website;
-    }
+  return (
+    <figure className={wrapper(title)}>
+      {demoSnippet}
 
-    return (
-      <figure className={generateParentStyles(title)}>
-        {demoSnippet ? demoSnippet : <SnippetLoader />}
+      <img src={curlyArrow} className={arrow(title)} alt="curly-arrow" />
 
-        {demoCard ? demoCard : <SnippetCardLoader />}
-
-        {arrowIcon}
-      </figure>
-    );
-  }, [arrowIcon, demoCard, demoSnippet, title]);
-
-  return <Fragment>{displayItem()}</Fragment>;
+      {demoCard}
+    </figure>
+  );
 };
 
 export default DemoItem;
