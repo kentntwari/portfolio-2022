@@ -2,14 +2,23 @@ import { createClassString } from '../../utilities/functions/createClassString';
 
 export const snippet_loader = createClassString({
   animation: 'animation-pulse',
-  width: 'w-[600px]',
-  height: 'h-[360px]',
-  background: 'bg-gray-full-200',
+  width: '2xl:w-[600px]',
+  height: '2xl:h-[360px]',
+  background: 'bg-gray-full-100',
   border: 'border border-gray-full-300 rounded-md',
   dropShadow: 'drop-shadow-regular',
 });
 
+export const inner_snippet_loader = createClassString({
+  animation: 'animate-pulse',
+  width: 'w-full',
+  height: 'h-full',
+  background: 'bg-gray-full-400',
+  border: 'rounded-md',
+});
+
 export const card_loader = createClassString({
+  position: 'absolute',
   animation: 'animation-pulse',
   width: 'w-[301px]',
   padding: 'p-5',
