@@ -18,19 +18,17 @@ const DemoItem = ({ text, title, image }) => {
   useEffect(() => {
     let isMounted = true;
 
-    import('../../utilities/functions/customSnippetStyles').then(({ modifySnippet }) =>
-      setTimeout(
-        () =>
-          isMounted &&
-          setDemoSnippet(() => (
-            <img
-              className={`${modifySnippet(title)} ${default_demo_snippet}`}
-              src={image}
-              alt={`${title}_snippet`}
-            />
-          )),
-        2000
-      )
+    // set image snippet
+    import('../../utilities/functions/customSnippetStyles').then(
+      ({ modifySnippet }) =>
+        isMounted &&
+        setDemoSnippet(() => (
+          <img
+            className={`${modifySnippet(title)} ${default_demo_snippet}`}
+            src={image}
+            alt={`${title}_snippet`}
+          />
+        ))
     );
 
     return () => (isMounted = false);
@@ -39,18 +37,15 @@ const DemoItem = ({ text, title, image }) => {
   useEffect(() => {
     let is_mounted = true;
 
+    // set card for image snippet
     import('../../utilities/functions/generateCardSnippetTextStyles').then(
       ({ cardTextClass }) =>
-        setTimeout(
-          () =>
-            is_mounted &&
-            setDemoCard(() => (
-              <figcaption className={`${cardTextClass(title)} ${default_demo_card}`}>
-                {text}
-              </figcaption>
-            )),
-          2000
-        )
+        is_mounted &&
+        setDemoCard(() => (
+          <figcaption className={`${cardTextClass(title)} ${default_demo_card}`}>
+            {text}
+          </figcaption>
+        ))
     );
 
     return () => (is_mounted = false);
