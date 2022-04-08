@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
 
 import Navigation from '../menu/component.navigation';
+import { FooterContactLinks } from '../blocks/component.contactLinks';
 import Copyright from '../../utilities/images/copyright.png';
 
 import {
@@ -14,7 +14,6 @@ import {
   section_right_div_wrapper,
   section_right_paragraph,
   section_nav_copyright,
-  link_contact,
   navigation,
   paragraph_copyright,
   img_copyright,
@@ -36,12 +35,7 @@ const Footer = () => {
           </div>
 
           <section className={section_contact}>
-            <Link to="/" className={link_contact}>
-              Contact me on Indeed
-            </Link>
-            <Link to="/" className={link_contact}>
-              Contact me on Linkedin
-            </Link>
+            <FooterContactLinks />
           </section>
         </section>
 
@@ -51,7 +45,7 @@ const Footer = () => {
           <section className={section_nav_copyright}>
             <Navigation
               hiddenOnMobile={false}
-              className={navigation}
+              variant={navigation}
               applyClassOnLink="font-bold"
             />
 

@@ -23,13 +23,18 @@ export default {
       type: 'url',
     },
     {
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: 'repo',
+      title: 'Git repo URL',
+      type: 'url',
     },
+    // {
+    //   name: 'image',
+    //   title: 'Image',
+    //   type: 'image',
+    //   options: {
+    //     hotspot: true,
+    //   },
+    // },
     {
       name: 'preview',
       title: 'Preview',

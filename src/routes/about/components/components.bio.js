@@ -1,4 +1,4 @@
-import React, { Fragment, useMemo } from 'react';
+import React, { Fragment } from 'react';
 
 import useFetchBackground from '../../../utilities/hooks/useFetchBackground';
 import useWatchWindowSize from '../../../utilities/hooks/useWatchWindowSize';

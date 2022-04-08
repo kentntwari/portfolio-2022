@@ -8,9 +8,8 @@ export const default_link = createClassString({
 });
 
 export const default_nav = createClassString({
-  position: 'absolute 2xl:static',
   left: 'lg:left-5',
   display: 'flex',
   flexDirection: 'flex-col',
-  gap: 'gap-10 lg:gap-[70px] 2xl:gap-7.5',
+  gap: 'gap-10 lg:gap-[45px]',
 });

@@ -15,6 +15,10 @@ const useFetchWebsiteDetails = (slug) => {
       summary: null,
       title: null,
       trailer: null,
+      links: {
+        repo: null,
+        website: null,
+      },
     },
     is_error: false,
   };
@@ -103,6 +107,33 @@ const useFetchWebsiteDetails = (slug) => {
             trailer: action.payload,
           },
         };
+
+      case 'GET_REPO':
+        return {
+          ...state,
+          response: {
+            ...state.response,
+            links: {
+              ...state.response.links,
+              repo: action.payload,
+            },
+          },
+        };
+
+      case 'GET_WEBSITE':
+        return {
+          ...state,
+          response: {
+            ...state.response,
+            links: {
+              ...state.response.links,
+              website: action.payload,
+            },
+          },
+        };
+
+      default:
+        return state;
     }
   }
 
@@ -151,6 +182,12 @@ const useFetchWebsiteDetails = (slug) => {
 
           fetch_sanity.trailer &&
             dispatch({ type: 'GET_TRAILER', payload: fetch_sanity.trailer });
+
+          if (fetch_sanity.links && fetch_sanity.links.repo !== null)
+            dispatch({ type: 'GET_REPO', payload: fetch_sanity.links.repo });
+
+          if (fetch_sanity.links && fetch_sanity.links.website !== null)
+            dispatch({ type: 'GET_WEBSITE', payload: fetch_sanity.links.website });
         }
       } catch (error) {
         is_mounted && dispatch({ type: 'IS_ERROR' });
@@ -171,6 +208,7 @@ const useFetchWebsiteDetails = (slug) => {
       features: state.response.features,
       challenges: state.response.challenges,
       trailer: state.response.trailer,
+      links: state.response.links,
     },
   };
 };

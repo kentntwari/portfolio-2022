@@ -26,8 +26,3 @@ export const divWrapper = createClassString({
   alignItems: 'md:items-center',
   gap: 'gap-5 xl:gap-10',
 });
-
-export const button = createClassString({
-  padding: 'py-5 px-7.5 md:px-5 lg:px-7.5',
-  textAlign: 'text-center',
-});

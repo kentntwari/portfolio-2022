@@ -22,7 +22,7 @@ export const heading = createClassString({
 export const divWrapper = createClassString({
   display: 'flex',
   flexWrap: 'flex-wrap',
-  justifyContent: 'justify-between',
+  justifyContent: 'justify-evenly lg:justify-between',
   gap: 'gap-5 lg:gap-[61px] xl:gap-7.5',
 });
 

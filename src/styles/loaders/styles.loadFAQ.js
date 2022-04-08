@@ -1,9 +1,9 @@
 import { createClassString } from '../../utilities/functions/createClassString';
 
 export const card = createClassString({
-  margin: 'mt-20',
   display: 'flex',
   flexDirection: 'flex-col',
+  alignItems:'items-center md:items-start',
   gap: 'gap-5',
 });
 
@@ -18,8 +18,8 @@ export const wrapper_div_question = createClassString({
   flexDirection: 'flex-col',
   gap: 'gap-2',
   background: 'bg-white-full',
-  width: 'w-[580px]',
-  padding: 'py-2.5 lg:py-5 px-5 lg:px-10',
+  width: 'w-fit md:w-[580px]',
+  padding: 'py-5 px-5 lg:px-10',
   border: 'border-b border-solid border-[#c4c4c4] rounded-t-md',
 });
 
@@ -35,8 +35,8 @@ export const wrapper_div_answer = createClassString({
   flexDirection: 'flex-col',
   gap: 'gap-2',
   background: 'bg-white-70',
-  width: 'w-[580px]',
-  padding: 'py-2.5 lg:py-5 px-5 lg:px-10',
+  width: 'w-fit md:w-[580px]',
+  padding: 'py-5 px-5 lg:px-10',
   border: 'border-b border-solid border-[#c4c4c4] rounded-b-md',
 });
 

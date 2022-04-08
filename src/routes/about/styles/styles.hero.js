@@ -17,3 +17,12 @@ export const paragraph = createClassString({
   textAlign: 'lg:text-center',
   texture: 'xl:major',
 });
+
+export const default_headshot_styles = createClassString({
+  margin: 'mt-36 md:mt-24',
+  width: 'xl:w-[790px]',
+  transform: ' transform',
+  scale: 'md:scale-100',
+  translateX: 'translate-x-5 3xl:translate-x-96 lg:translate-x-72 xl:translate-x-60',
+  translateY: 'lg:-translate-y-4',
+});

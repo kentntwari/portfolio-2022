@@ -19,6 +19,7 @@ const CircleRightHero = () => {
         coordinatesX="right-0 translate-x-[5.625rem] 2xl:-translate-x-16"
         coordinatesY="top-0 translate-y-[29.75rem] 2xl:-translate-y-40"
       />
+
       <Circle
         className="hidden lg:block"
         bgColor="bg-green-14"

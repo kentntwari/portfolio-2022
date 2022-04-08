@@ -12,7 +12,7 @@ const Website = ({ title, description, slug, bgColor }) => {
         <p>{description}</p>
       </div>
 
-      <ButtonSecondary url={`/works/${slug}`} className={button}>
+      <ButtonSecondary url={`/works/${slug}`} variant={button}>
         Learn More
       </ButtonSecondary>
     </article>

@@ -1,4 +1,4 @@
-import React, { Fragment, useCallback, useContext } from 'react';
+import React, { useCallback, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -7,7 +7,7 @@ import blurContext from '../../global/context/context.init';
 import { default_link, default_nav } from '../../styles/menu/styles.navigation';
 
 const Navigation = ({ ...props }) => {
-  const { hiddenOnMobile, className, applyClassOnLink } = props;
+  const { hiddenOnMobile, variant, applyClassOnLink } = props;
 
   const context = useContext(blurContext);
   const { hideBgBlur } = context;
@@ -31,14 +31,12 @@ const Navigation = ({ ...props }) => {
   }, [applyClassOnLink, hideBgBlur]);
 
   return (
-    <Fragment>
-      <nav
-        className={`${hiddenOnMobile ? 'hidden' : 'block'} ${
-          className ? className : default_nav
-        }`}>
-        {displayLinks()}
-      </nav>
-    </Fragment>
+    <nav
+      className={`${hiddenOnMobile ? 'hidden' : 'block'} ${
+        variant ? variant : ''
+      } ${default_nav}`}>
+      {displayLinks()}
+    </nav>
   );
 };
 

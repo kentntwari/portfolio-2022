@@ -24,5 +24,5 @@ export const heading = createClassString({
 export const paragraph = createClassString({
   width: 'lg:w-[670px] xl:w-3/4 2xl:w-3/5',
   texture: 'lg:major',
-  textAlign: 'text-center',
+  textAlign: 'lg:text-center',
 });

@@ -13,7 +13,7 @@ const Facts = () => {
 
   return (
     <section className={section}>
-      <HandleState showLoader={response.facts ? false : true}>
+      <HandleState showLoader={response.facts ? false : true} className="hidden">
         {response.facts &&
           response.facts.map(
             (res, index) =>

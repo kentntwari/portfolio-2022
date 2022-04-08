@@ -26,7 +26,7 @@ export const divWrapperInner = createClassString({
 
 export const heading = createClassString({
   width: 'lg:w-1/2 xl:w-3/5',
-  textAlign: 'text-center',
+  textAlign: 'lg:text-center',
 });
 
 export const paragraph = createClassString({

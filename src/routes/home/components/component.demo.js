@@ -1,4 +1,4 @@
-import React, { Fragment, useCallback } from 'react';
+import React, { Fragment } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 import useFetchHomepageDemo from '../../../utilities/hooks/useFetchHomepageDemo';
@@ -10,17 +10,18 @@ import { LoadSnippet } from '../../../components/loaders/homepage/loaders.demo';
 import { section } from '../styles/styles.demo';
 
 const Demo = () => {
-  const snippets = useFetchHomepageDemo();
+  const { isError, is_api_valid, is_loading, response } = useFetchHomepageDemo();
 
-  const displayDemo = useCallback(() => {
-    if (snippets.is_api_valid === false) return <HandleState showLoader={true} />;
+  if (is_loading || !is_api_valid)
+    return <HandleState showLoader={true} className="mb-96" />;
 
-    if (snippets.is_error) return <HandleState showError={true} />;
+  if (isError) return <HandleState showError={true} className="mb-96" />;
 
-    return (
-      <HandleState showLoader={snippets.is_loading}>
-        <section className={section}>
-          {snippets.response.map((elt) => {
+  return (
+    <HandleState showLoader={response ? false : true} className="mb-96">
+      <section className={section}>
+        {response &&
+          response.map((elt) => {
             if (elt.is_loading)
               return (
                 <Fragment key={uuidv4()}>
@@ -38,13 +39,9 @@ const Demo = () => {
               </Fragment>
             );
           })}
-        </section>
-        ;
-      </HandleState>
-    );
-  }, [snippets]);
-
-  return <Fragment>{displayDemo()}</Fragment>;
+      </section>
+    </HandleState>
+  );
 };
 
 export default Demo;

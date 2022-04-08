@@ -8,7 +8,6 @@ import { section, article, heading, paragraph, button } from '../styles/styles.h
 import BlobHeroHomeLeft from '../../../components/background/homepage/component.blobHeroLeft';
 import CircleRightHero from '../../../components/background/homepage/component.circleRightHero';
 
-/* EXPORTED COMPONENT */
 const Hero = () => {
   return (
     <section className={section}>
@@ -18,7 +17,7 @@ const Hero = () => {
           Got an idea or a mockup of your design you'd like to see on the web? No problem
           - I'll code it out for you and make it functional!
         </p>
-        <ButtonPrimary url="/works" className={button}>
+        <ButtonPrimary url="/works" variant={button}>
           Check out my work
         </ButtonPrimary>
       </article>

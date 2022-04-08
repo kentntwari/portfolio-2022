@@ -13,27 +13,28 @@ import CircleTechBottom from '../../../components/background/homepage/component.
 const Tech = () => {
   const { is_api_valid, is_error, is_loading, response } = useFetchTechUsed();
 
+  if (is_loading || !is_api_valid)
+    return <HandleState showLoader={true} loader={<LoadTech />} />;
+
+  if (is_error) return <HandleState showError={true} error={<LoadTech />} />;
+
   return (
-    <section className={section}>
-      <h2 className={heading}>Here's some of the technologies I use in my projects</h2>
+    <HandleState showLoader={response ? false : true} loader={<LoadTech />}>
+      <section className={section}>
+        <h2 className={heading}>Here's some of the technologies I use in my projects</h2>
 
-      <div className={divWrapper}>
-        {!is_api_valid && <HandleState showLoader={true} loader={<LoadTech />} />}
-
-        {is_error && <HandleState showError={true} error={<LoadTech />} />}
-
-        <HandleState showLoader={is_loading} loader={<LoadTech />}>
+        <div className={divWrapper}>
           {response &&
             response.map(({ logo, tech: name }) => (
               <img key={uuidv4()} className={img} src={logo} alt={name} title={name} />
             ))}
-        </HandleState>
-      </div>
+        </div>
 
-      <Fragment>
-        <CircleTechBottom />
-      </Fragment>
-    </section>
+        <Fragment>
+          <CircleTechBottom />
+        </Fragment>
+      </section>
+    </HandleState>
   );
 };
 

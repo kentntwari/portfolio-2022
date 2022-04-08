@@ -5,6 +5,7 @@ export function website(slug) {
     'preview': preview.asset->url,
     summary,
     title,
-    trailer
+    trailer,
+    'links':{'repo':repo,'website':url}
   }`;
 }

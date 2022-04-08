@@ -1,12 +1,16 @@
 import React, { useRef, createRef, useContext } from 'react';
 
-import blurContext from '../../global/context/blurContext';
+import useWatchWindowSize from '../../utilities/hooks/useWatchWindowSize';
+
+import blurContext from '../../global/context/context.init';
 
 import Burger from '../../utilities/images/hamburger.png';
-import Navigation from './Navigation';
-import BlobMenuTopLeft from '../background/menu/BlobMenuTopLeft';
+import Navigation from './component.navigation';
+import BlobMenuTopLeft from '../background/menu/component.blobTopLeft';
 
 const Menu = () => {
+  const [isWithinMaxWidth, , ,] = useWatchWindowSize({ maxWidth: '1439px' });
+
   const context = useContext(blurContext);
   const { hidden, triggerBgBlur } = context;
 
@@ -14,24 +18,32 @@ const Menu = () => {
   const blob_menu_ref = createRef();
 
   return (
-    <header className="relative mb-33 z-20">
-      <Navigation hiddenOnMobile={hidden} />
-      
-      <img
-        ref={burger_ref}
-        className={hidden ? 'w-[50px] h-[50px]' : 'hidden'}
-        src={Burger}
-        onClick={() => {
-          burger_ref.current.classList.add('hidden');
+    <header className="relative mb-33 2xl:mb-36 z-20">
+      {isWithinMaxWidth ? (
+        <Navigation hiddenOnMobile={hidden} variant="absolute" />
+      ) : (
+        <Navigation variant="2xl:static" />
+      )}
 
-          triggerBgBlur();
+      {isWithinMaxWidth && (
+        <img
+          ref={burger_ref}
+          className={hidden ? 'w-[50px] h-[50px]' : 'hidden'}
+          src={Burger}
+          onClick={() => {
+            burger_ref.current.classList.add('hidden');
 
-          document.body.classList.add('overflow-hidden');
-        }}
-        alt="burger-nav-icon"
-      />
+            triggerBgBlur();
 
-      <BlobMenuTopLeft ref={blob_menu_ref} hiddenOnMobile={hidden} />
+            document.body.classList.add('overflow-hidden');
+          }}
+          alt="burger-nav-icon"
+        />
+      )}
+
+      {isWithinMaxWidth && (
+        <BlobMenuTopLeft ref={blob_menu_ref} hiddenOnMobile={hidden} />
+      )}
     </header>
   );
 };
