@@ -4,6 +4,7 @@ import useWatchWindowSize from '../../../utilities/hooks/useWatchWindowSize';
 
 import Circle from '../component.circle';
 
+// blurred circle at the bottom of the page
 const CircleBottomRight = () => {
   const [isWithinMaxWidth, isWithinMinWidth, ,] = useWatchWindowSize({
     maxWidth: '768px',

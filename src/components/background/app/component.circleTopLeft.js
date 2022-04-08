@@ -4,6 +4,7 @@ import useWatchWindowSize from '../../../utilities/hooks/useWatchWindowSize';
 
 import Circle from '../component.circle';
 
+// circle at the top lef of the page
 const CircleTopLeft = () => {
   const [isWithinMaxWidth, isWithinMinWidth, ,] = useWatchWindowSize({
     maxWidth: '768px',

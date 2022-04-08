@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 
 import blurContext from '../../../global/context/context.init';
 
+// blurred background when menu is toggled
 const BlurredBg = ({ children }) => {
   const context = useContext(blurContext);
 
