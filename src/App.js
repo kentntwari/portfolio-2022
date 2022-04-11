@@ -1,5 +1,4 @@
-import React, { Fragment, lazy, Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React from 'react';
 
 // import BlurredBg from './components/background/app/component.blurredBg';
 // import Menu from './components/menu';
