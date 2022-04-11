@@ -1,18 +1,18 @@
 import React, { Fragment, lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import BlurredBg from './components/background/app/BlurredBg';
-import Menu from './components/menu/index';
-import Footer from './components/footer/index';
-import { LoadPage } from './components/loaders/page/index';
+import BlurredBg from './components/background/app/component.blurredBg';
+import Menu from './components/menu';
+import Footer from './components/footer';
+import { LoadPage } from './components/loaders/page/loaders.page';
 
-import CircleTopLeft from './components/background/app/CircleTopLeft';
-import CircleBottomRight from './components/background/app/CircleBottomRight';
+import CircleTopLeft from './components/background/app/component.circleTopLeft';
+import CircleBottomRight from './components/background/app/component.circleBottomRight';
 
-const Home = lazy(() => import('./routes/home/index'));
-const About = lazy(() => import('./routes/about/index'));
-const Works = lazy(() => import('./routes/works/index'));
-const Website = lazy(() => import('./routes/website/index'));
+const Home = lazy(() => import('./routes/home'));
+const About = lazy(() => import('./routes/about'));
+const Works = lazy(() => import('./routes/works'));
+const Website = lazy(() => import('./routes/website'));
 
 function App() {
   return (

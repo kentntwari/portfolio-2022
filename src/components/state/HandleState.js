@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import { LoadPage } from '../loaders/page';
+import { LoadPage } from '../loaders/page/Page';
 
 const HandleState = ({ ...props }) => {
   const {
