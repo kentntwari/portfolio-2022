@@ -9,15 +9,16 @@ import { Routes, Route } from 'react-router-dom';
 // import CircleTopLeft from './components/background/app/component.circleTopLeft';
 // import CircleBottomRight from './components/background/app/component.circleBottomRight';
 
-const Home = lazy(() => import('./routes/home'));
-const About = lazy(() => import('./routes/about'));
-const Works = lazy(() => import('./routes/works'));
-const Website = lazy(() => import('./routes/website'));
+// const Home = lazy(() => import('./routes/home'));
+// const About = lazy(() => import('./routes/about'));
+// const Works = lazy(() => import('./routes/works'));
+// const Website = lazy(() => import('./routes/website'));
 
 function App() {
   return (
     <div className="App">
-      <Fragment>
+      <h1>hello</h1>
+      {/* <Fragment>
         <Menu />
 
         <BlurredBg>
@@ -37,7 +38,7 @@ function App() {
       <Fragment>
         <CircleTopLeft />
         <CircleBottomRight />
-      </Fragment>
+      </Fragment> */}
     </div>
   );
 }
