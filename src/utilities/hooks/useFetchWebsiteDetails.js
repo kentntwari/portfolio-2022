@@ -142,7 +142,7 @@ const useFetchWebsiteDetails = (slug) => {
 
     (async function getApi() {
       try {
-        const API_ENDPOINT = (await import('../../api/api.website')).website(slug);
+        const API_ENDPOINT = (await import('../../api/website')).website(slug);
 
         is_mounted && dispatch({ type: 'GET_API', payload: API_ENDPOINT });
       } catch (error) {

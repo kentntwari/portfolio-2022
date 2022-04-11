@@ -32,7 +32,7 @@ const useFetchWebsites = () => {
         return { ...state, is_error: true };
 
       default:
-        return console.error('Case is missing is current hook');
+        return state;
     }
   }
 
@@ -41,7 +41,7 @@ const useFetchWebsites = () => {
 
     (async function getAPI() {
       try {
-        const API_ENDPOINT = (await import('../../api/api.websites')).websites();
+        const API_ENDPOINT = (await import('../../api/websites')).websites();
 
         if (is_mounted) dispatch({ type: 'GET_API', payload: API_ENDPOINT });
       } catch (error) {

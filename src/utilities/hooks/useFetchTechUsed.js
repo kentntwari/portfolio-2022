@@ -41,7 +41,7 @@ const useFetchTechUsed = () => {
 
     (async function getAPI() {
       try {
-        const API_ENDPOINT = (await import('../../api/api.technologies')).technologies();
+        const API_ENDPOINT = (await import('../../api/technologies')).technologies();
 
         if (is_mounted) dispatch({ type: 'GET_API', payload: API_ENDPOINT });
       } catch (error) {

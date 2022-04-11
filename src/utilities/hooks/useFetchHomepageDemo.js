@@ -91,6 +91,9 @@ const useFetchHomepageDemo = () => {
           ...state,
           isError: true,
         };
+
+      default:
+        return state;
     }
   }
 
@@ -99,7 +102,7 @@ const useFetchHomepageDemo = () => {
 
     (async function getAPI() {
       try {
-        const API_ENDPOINT = (await import('../../api/api.homeDemo')).homeDemo();
+        const API_ENDPOINT = (await import('../../api/homeDemo')).homeDemo();
 
         if (is_mounted) dispatch({ type: 'GET_API', payload: API_ENDPOINT });
       } catch (error) {

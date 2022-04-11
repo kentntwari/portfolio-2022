@@ -75,6 +75,9 @@ const useFetchBackground = () => {
             questions: action.payload,
           },
         };
+
+      default:
+        return state;
     }
   }
 
@@ -83,7 +86,7 @@ const useFetchBackground = () => {
 
     (async function getApi() {
       try {
-        const API_ENDPOINT = (await import('../../api/api.background')).background();
+        const API_ENDPOINT = (await import('../../api/background')).background();
 
         if (is_mounted) dispatch({ type: 'GET_API', payload: API_ENDPOINT });
       } catch (error) {
