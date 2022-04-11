@@ -1,4 +1,4 @@
-import { arrow_styles } from '../../styles/blocks/styles.demoItem';
+import { arrow_styles } from '../../styles/blocks/demoItem';
 
 export function arrowCustomStyles(title) {
   if (title === 'code') return arrow_styles.code;

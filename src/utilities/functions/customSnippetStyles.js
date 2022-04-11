@@ -1,4 +1,4 @@
-import { parent_styles } from '../../styles/blocks/styles.demoItem';
+import { parent_styles } from '../../styles/blocks/demoItem';
 
 export function generateParentStyles(title) {
   if (title === 'code') return parent_styles.code;

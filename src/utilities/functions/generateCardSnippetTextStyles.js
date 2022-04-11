@@ -2,7 +2,7 @@ import {
   code_card_styles,
   figma_card_styles,
   website_card_styles,
-} from '../../styles/blocks/styles.demoItem';
+} from '../../styles/blocks/demoItem';
 
 export function cardTextClass(title) {
   if (title === 'code') return code_card_styles;
