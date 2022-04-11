@@ -6,8 +6,8 @@ import Menu from './components/menu';
 import Footer from './components/footer';
 import { LoadPage } from './components/loaders/page';
 
-import CircleTopLeft from './components/background/app/component.circleTopLeft';
-import CircleBottomRight from './components/background/app/component.circleBottomRight';
+import CircleTopLeft from './components/background/app/CircleTopLeft';
+import CircleBottomRight from './components/background/app/CircleBottomRight';
 
 const Home = lazy(() => import('./routes/home'));
 const About = lazy(() => import('./routes/about'));
