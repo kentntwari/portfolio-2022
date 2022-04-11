@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
-import Navigation from '../menu/component.navigation';
-import { FooterContactLinks } from '../blocks/component.contactLinks';
+import Navigation from '../menu/Navigation';
+import { FooterContactLinks } from '../blocks/ContactLinks';
 import Copyright from '../../utilities/images/copyright.png';
 
 import {

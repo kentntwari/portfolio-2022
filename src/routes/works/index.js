@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
-import Hero from './components/components.hero';
-import Websites from './components/component.websites';
+import Hero from './components/Hero';
+import Websites from './components/Websites';
 
 const Works = () => {
   return (

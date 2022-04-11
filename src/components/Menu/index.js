@@ -2,11 +2,11 @@ import React, { useRef, createRef, useContext } from 'react';
 
 import useWatchWindowSize from '../../utilities/hooks/useWatchWindowSize';
 
-import blurContext from '../../global/context/context.init';
+import blurContext from '../../global/context/initContext';
 
 import Burger from '../../utilities/images/hamburger.png';
-import Navigation from './component.navigation';
-import BlobMenuTopLeft from '../background/menu/component.blobTopLeft';
+import Navigation from './Navigation';
+import BlobMenuTopLeft from '../background/menu/BlobTopLeft';
 
 const Menu = () => {
   const [isWithinMaxWidth, , ,] = useWatchWindowSize({ maxWidth: '1439px' });

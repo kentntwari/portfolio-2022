@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Hero from './components/component.hero';
-import Tech from './components/component.tech';
-import Works from './components/component.works';
+import Hero from './components/Hero';
+import Tech from './components/Tech';
+import Works from './components/Works';
 
 const Home = () => {
   return (
