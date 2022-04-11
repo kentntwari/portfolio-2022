@@ -1,7 +1,7 @@
 import React, { Fragment, lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import BlurredBg from './components/background/app/component.blurredBg';
+import BlurredBg from './components/background/app/BlurredBg';
 import Menu from './components/menu';
 import Footer from './components/footer';
 import { LoadPage } from './components/loaders/page';
