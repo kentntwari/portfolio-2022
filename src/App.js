@@ -2,9 +2,8 @@ import React, { Fragment, lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import BlurredBg from './components/background/app/component.blurredBg';
-import Menu from './components/menu';
 import Footer from './components/footer';
-import { LoadPage } from './components/loaders/page/loaders.page';
+import { LoadPage } from './components/loaders/page';
 
 import CircleTopLeft from './components/background/app/component.circleTopLeft';
 import CircleBottomRight from './components/background/app/component.circleBottomRight';
@@ -18,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <Fragment>
-        <Menu />
+        {/* <Menu /> */}
 
         <BlurredBg>
           <Suspense fallback={<LoadPage />}>
