@@ -2,6 +2,8 @@ import React, { useCallback, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
+import useScrollToTop from '../../utilities/hooks/useScrollToTop';
+
 import blurContext from '../../global/context/initContext';
 
 import { default_link, default_nav } from '../../styles/menu/navigation';
@@ -11,6 +13,8 @@ const Navigation = ({ ...props }) => {
 
   const context = useContext(blurContext);
   const { hideBgBlur } = context;
+
+  const scrollToTop = useScrollToTop();
 
   const displayLinks = useCallback(() => {
     const links = ['Home', 'About', 'Works'];
@@ -24,11 +28,13 @@ const Navigation = ({ ...props }) => {
           hideBgBlur();
 
           document.body.classList.remove('overflow-hidden');
+
+          scrollToTop();
         }}>
         {link}
       </Link>
     ));
-  }, [applyClassOnLink, hideBgBlur]);
+  }, [applyClassOnLink, hideBgBlur, scrollToTop]);
 
   return (
     <nav
