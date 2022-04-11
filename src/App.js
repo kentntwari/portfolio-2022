@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 // import BlurredBg from './components/background/app/component.blurredBg';
-// import Menu from './components/menu';
-// import Footer from './components/footer';
+import Menu from './components/menu';
+import Footer from './components/footer';
 // import { LoadPage } from './components/loaders/page/loaders.page';
 
 // import CircleTopLeft from './components/background/app/component.circleTopLeft';
@@ -16,11 +16,10 @@ import React from 'react';
 function App() {
   return (
     <div className="App">
-      <h1>hello</h1>
-      {/* <Fragment>
+      <Fragment>
         <Menu />
 
-        <BlurredBg>
+        {/* <BlurredBg>
           <Suspense fallback={<LoadPage />}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -29,11 +28,11 @@ function App() {
               <Route path="/works/:website" element={<Website />} />
             </Routes>
           </Suspense>
-        </BlurredBg>
+        </BlurredBg> */}
 
         <Footer />
       </Fragment>
-
+{/* 
       <Fragment>
         <CircleTopLeft />
         <CircleBottomRight />
