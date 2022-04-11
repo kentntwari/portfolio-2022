@@ -1,13 +1,13 @@
 import React, { Fragment, lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import BlurredBg from './components/background/app/component.blurredBg';
+import BlurredBg from './components/background/app/BlurredBg';
 import Menu from './components/menu';
 import Footer from './components/footer';
-import { LoadPage } from './components/loaders/page/loaders.page';
+import { LoadPage } from './components/loaders/page';
 
-import CircleTopLeft from './components/background/app/component.circleTopLeft';
-import CircleBottomRight from './components/background/app/component.circleBottomRight';
+import CircleTopLeft from './components/background/app/CircleTopLeft';
+import CircleBottomRight from './components/background/app/CircleBottomRight';
 
 const Home = lazy(() => import('./routes/home'));
 const About = lazy(() => import('./routes/about'));

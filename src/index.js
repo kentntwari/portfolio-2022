@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 
-import BlurState from './global/context/context.state';
+import BlurState from './global/context/state';
 import App from './App';
 
 ReactDOM.render(
