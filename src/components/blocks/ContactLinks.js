@@ -12,7 +12,7 @@ export const links = [
   },
   {
     name: 'Linkedin',
-    url: 'https://www.linkedin.com/in/kent-ntwari-406911134/',
+    url: 'https://www.linkedin.com/in/kentntwari/',
   },
 ];
 
